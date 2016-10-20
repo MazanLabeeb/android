@@ -5,7 +5,9 @@
     <script>
       if (window.cordova && StatusBar)
   {
-    StatusBar.backgroundColorByHexString('#BE1912');
+    if(!StatusBar.backgroundColorByHexString('#BE1912')){
+     alert("cannot change"); 
+    }
   }
 
     </script>
@@ -16,6 +18,5 @@
   <body>
     <h1>Mazan Labeeb</h1>
     This is my first android app made with adobe phonegap.
-    <h2>Updated content</h2>
   </body>
 </html>
