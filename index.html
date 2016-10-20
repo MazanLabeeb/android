@@ -3,12 +3,14 @@
   <head>
     <title>Mazan Labeeb</title>
     <script>
-    if (window.cordova && StatusBar)
+  window.addEventListener("batterystatus", onBatteryStatus, false);
+ 
+function onBatteryStatus(info) 
 {
-    StatusBar.backgroundColorByHexString('#BE1912');
+    // The battery level and plugged/unplugged status
+    console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
+   alert("Battery Level Low " + info.level + "%");
 }
-      alert("hye");
-
     </script>
     <style>
       
@@ -17,5 +19,6 @@
   <body>
     <h1>Mazan Labeeb</h1>
     This is my first android app made with adobe phonegap.
+    
   </body>
 </html>
